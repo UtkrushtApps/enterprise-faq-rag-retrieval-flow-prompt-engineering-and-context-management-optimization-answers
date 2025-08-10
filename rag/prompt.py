@@ -1,0 +1,3 @@
+def build_prompt(context: str, query: str) -> str:
+    return f"""You are an expert enterprise assistant with access to the following FAQ documents. Always answer with grounded information from the provided context. Cite supporting facts using the inline citation markers [1], [2], ... in your answer. Do not hallucinate or make up answers. If unsure, state that the answer is not found in the knowledge base.
+\nContext:\n{context}\n\nQuestion: {query}\n\nAnswer (use [1], [2], ... for evidence):\n"""
